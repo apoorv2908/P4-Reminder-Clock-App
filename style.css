@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3D087B;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+}
+
+.sub-container{
+    width: 576px;
+    height: 725px;
+    margin-top: 34px;
+}
+
+.clock-logo{
+    height: 77px;
+    width: 203px;
+    background-image: url("clock_logo@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-box{
+    width: 575px;
+    height: 385px;
+    margin-top: 38px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid  #FFFFFF;
+}
+
+.gm{
+    width: 575px;
+    height: 77px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 1px solid #EDEDED;
+    opacity: 0.23;
+}
+
+.gm-text{
+    color: black;
+    width: 381px;
+    height: 35px;
+    opacity: 1px;
+    font-family: 'Bungee';
+    font-size: 130%;
+    padding-left: 25px;
+    padding-top: 11px;
+}
+
+.bottom-boxes{
+    display: flex;
+    margin-top: 20px;
+}
+
+.alarm-button{
+    width: 299px;
+    height: 50px;
+    background-image: linear-gradient(113deg, #6E54EC, #CB52F8, #FC5EFF, #F1A7C5);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid #6E54EC;
+    padding-left: 95px;
+    padding-top: 7px;
+    font-family: 'Manrope';
+    font-size: 150%;
+}
+
+.alarm-button:hover{
+    background-image: linear-gradient(113deg, #F1A7C5, #FC5EFF, #CB52F8, #6E54EC);
+}
+
+.timings{
+    width: 262px;
+    height: 117px;
+    border: 1px solid #EDEDED;
+    margin-left: 14px;
+    opacity: 0.4;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    color: rgb(238, 5, 255);
+    font-family: 'Manrope';
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 12px;
+    padding-top: 14px;
+}
+
+span{
+
+    font-family: 'Manrope';
+    color: rgba(61, 8, 123, 1);
+    margin-left: 55px;
+    margin-top: 3px;
+    
+}
+
+img{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.clock{
+    width: 575px;
+    height: 130px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF ;
+    display: flex;
+    font-size: large;
+}
+
+.clock-box1{
+    color: #3D087B;
+    font-family: 'Manrope';
+    margin-top: 52px;
+    margin-left: 39px;
+}
+
+.clock-box2{
+    background-image: url("timeline.png");
+    height: 90px;
+    width: 80px;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+
+.clock-box3{
+    background-image: url("timeline.png");
+    height: 90px;
+    width: 80px;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+
+.clock-box4{
+    background-image: url("timeline.png");
+    height: 90px;
+    width: 80px;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+.clock-box5{
+    background-image: url("AM_svg.png");
+    height: 90px;
+    width: 80px;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+
+
+.c1{ 
+    width: 416px;
+    height: 130px;
+    margin-top: 55px;
+    background-color: #FFFFFF;
+    opacity: 0.71;
+    display: inline-block;
+}
+.c2{
+    width: 379px;
+    height: 130px;
+    margin-top: 67px;
+    background-color: #FFFFFF;
+    opacity: 0.22;
+    display: inline-block;
+
+}
+
+.qoute{
+    width: 575px;
+    height: 118px;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Bungee';
+    font-size: 170%;
+    padding-left: 35px;
+    padding-top: 25px;
+    color: rgba(142, 83, 240, 1);
+}
+
+.pic{
+
+    width: 575px;
+    height: 385px;
+    margin-top: 15px;
+    background-image: url("Component\ 30\ –\ 1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.img1{
+    height: 60px;
+}
+
+.point1{
+    height: 60px;
+}
+
+label{
+    margin-left: 21px;
+    font-family: 'Manrope';
+    color: #3D087B;
+}
+
+.common-list{
+    display: flex;
+}
+
+
+.dd1{
+    width: 281px;
+    height: 45px;
+    font-family: 'Manrope';
+    color: #3D087B;
+    border: 1px solid #EDEDED;
+    margin-top: 13px;
+    margin-left: 40px;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+
+
+.dd2{
+    margin-left: 60px;
+    width: 281px;
+    height: 45px;
+    font-family: 'Manrope';
+    color: #3D087B;
+    border: 1px solid #EDEDED;
+    text-align: left;
+    margin-top: 60px;
+    padding-left: 20px;
+    margin-left: 60px;
+    border-radius: 5px;
+}
+
+.dd3{
+    margin-left: 75px;
+    width: 281px;
+    height: 45px;
+    font-family: 'Manrope';
+    color: #3D087B;
+    border: 1px solid #EDEDED;
+    padding-left: 20px;
+    margin-top: 60px;
+    margin-left: 75px;
+    border-radius: 5px;
+}
+
+.dd4{
+    margin-left: 60px;
+    width: 281px;
+    height: 45px;
+    font-family: 'Manrope';
+    color: #3D087B;
+    border: 1px solid #EDEDED;
+    padding-left: 20px;
+    margin-top: 55px;
+    margin-left: 60px;
+    border-radius: 5px;
+}
+
+
+.pt1{
+    background-image: url("wake_up.png");
+    height: 34px;
+    width: 34px;
+    margin-left: 25px ;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pt2{
+    background-image: url("lunch_time.png");
+    height: 34px;
+    width: 34px;
+    margin-left: 25px ;
+    margin-top: 63px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pt3{
+    background-image: url("nap_time.png");
+    height: 34px;
+    width: 34px;
+    margin-left: 25px ;
+    margin-top: 63px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pt4{
+    background-image: url("wake_up.png");
+    height: 34px;
+    width: 34px;
+    margin-left: 25px ;
+    margin-top: 63px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    
+}
+
