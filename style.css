@@ -261,17 +261,17 @@ img{
 
 #qoute{
     width: 575px;
-    height: 118px;
+    height: 120px;
     background-color: #FFFFFF;
     margin-top: 15px;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
     font-family: 'Bungee';
     font-size: 170%;
-    padding-left: 35px;
-    padding-top: 35px;
+    padding-top: 25px;
     color: rgba(142, 83, 240, 1);
-    line-height: 120%;
+    line-height: 100%;
+    text-align: center;
 }
 
 #pic{

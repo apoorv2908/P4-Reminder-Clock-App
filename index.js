@@ -1,6 +1,7 @@
 function clock(){
     var time = new Date();
     var hour = time.getHours().toString().padStart(2,0)
+    var test = time.getHours().toString().padStart(2,0)
     var minute = time.getMinutes().toString().padStart(2,0)
     var second = time.getSeconds().toString().padStart(2,0)
     var ampm = hour >= 12 ? 'PM' : 'AM';
@@ -13,68 +14,71 @@ function clock(){
     document.getElementById("clock-box4").textContent = second + "\nsecs"
     document.getElementById("clock-box5").textContent = ampm
 
-    
-let greeting_msg = document.getElementById("gm-text")
+    let greeting_msg = document.getElementById("gm-text")
 
-if(hour < 12 && hour >= 00){
-    greeting_msg.textContent = "GOOD MORNING!! WAKE UP !!"
+    if(test >= 00 && test < 12){
+        greeting_msg.textContent = "GOOD MORNING!! WAKE UP !!"
+    }else if( test >= 12 && test< 16){
+        greeting_msg.textContent ="GOOD AFTERNOON!!"}
+    else if(test >=16 && test< 19){
+        greeting_msg.textContent ="GOOD EVENING!!"}
+    else if(test >= 20 && test < 00 ){
+        greeting_msg.textContent ="GOOD NIGHT!!"  
 }
-if( hour >= 12 && hour < 16){
-    greeting_msg.textContent ="GOOD AFTERNOON!!"
-  }
-if(hour >=16 && hour< 20){
-    greeting_msg.textContent ="GOOD EVENING!!"
-}
-if(hour >= 20 && hour < 24 ){
-    greeting_msg.textContent ="GOOD NIGHT!!"  
-}
-
 
 
 }
 
 setInterval(clock, 1000)
+clock();
 
 
 function alarmTimings(){
     var time = new Date();
     var hour = parseInt(time.getHours().toString().padStart(2,0))
     var ampm = hour >= 12 ? 'PM' : 'AM';
+    hour = hour%12;
 
-    document.getElementById("clock-box2").textContent = hour 
+    let format = hour + " " + ampm + " - " + (hour + 1) + " " + ampm;
 
-    let wakeUpTime = document.getElementById("dd1").value
+
+    let wakeUpTime = document.getElementById("dd1").value;
     let lunchTime = document.getElementById("dd2").value;
     let napTime = document.getElementById("dd3").value;
     let nightTime = document.getElementById("dd4").value;
 
-    let newtime = parseInt(wakeUpTime) +1;
-    let int_lunctime = parseInt(lunchTime) +1;
-    let int_naptime = parseInt(napTime) +1;
-    let int_nighttime = parseInt(nightTime) +1;
-
-    if (hour == wakeUpTime) {
+    if (format == wakeUpTime) {
         document.getElementById("qoute").innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
         document.getElementById("pic").style.backgroundImage = "url('Component\ 30\ –\ 1.png')";
-    } else if (hour == lunchTime) {
+    } else if (format == lunchTime) {
         document.getElementById("qoute").innerText = "LET'S HAVE SOME LUNCH !!";
         document.getElementById("pic").style.backgroundImage = "url('Component\ 31 –\ 1.png')";
-    } else if (hour == napTime) {
+    } else if (format == napTime) {
         document.getElementById("qoute").innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
         document.getElementById("pic").style.backgroundImage = "url('lunch_image.png')";
-    } else if (hour == nightTime) {
+    } else if (format == nightTime) {
         document.getElementById("qoute").innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
         document.getElementById("pic").style.backgroundImage = "url('Component\ 32 –\ 1.png')";
+    } else{
+        document.getElementById("qoute").innerText = "Nothing to show now";
+        document.getElementById("pic").style.backgroundImage = "url('Component\ 30\ –\ 1.png')";
     }
 
-    document.getElementById("timing1").textContent = "Wake up Time: "  +  wakeUpTime + " " + ampm + " - "  + newtime + " " + ampm;
-    document.getElementById("timing2").textContent = "Lunch Time: "  +  lunchTime + " " + ampm + " - "  + int_lunctime + " " + ampm;
-    document.getElementById("timing3").textContent = "Nap Time: "  +  napTime + " " + ampm + " - "  + int_naptime + " " + ampm;
-    document.getElementById("timing4").textContent = "Night Time: "  +  nightTime + " " + ampm + " - "  + int_nighttime + " " + ampm;
+    var dropdown1 = document.getElementById("dd1")
+    var dropdown2 = document.getElementById("dd2")
+    var dropdown3 = document.getElementById("dd3")
+    var dropdown4 = document.getElementById("dd4")
 
+
+
+    document.getElementById("timing1").textContent = "Wake up Time: " + dropdown1.options[dropdown1.selectedIndex].text
+    document.getElementById("timing2").textContent = "Lunch Time: "  +  dropdown2.options[dropdown2.selectedIndex].text
+    document.getElementById("timing3").textContent = "Nap Time: "  +  dropdown3.options[dropdown3.selectedIndex].text
+    document.getElementById("timing4").textContent = "Night Time: "  +  dropdown4.options[dropdown4.selectedIndex].text
 
 }
 
+alarmTimings();
 
 
 
