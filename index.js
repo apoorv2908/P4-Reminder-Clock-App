@@ -1,12 +1,12 @@
 function clock(){
     var time = new Date();
-    var hour = time.getHours().toString().padStart(2,0)
-    var test = time.getHours().toString().padStart(2,0)
-    var minute = time.getMinutes().toString().padStart(2,0)
-    var second = time.getSeconds().toString().padStart(2,0)
+    var hour = time.getHours();
+    var test = time.getHours();
+    var minute = time.getMinutes().toString().padStart(2,0);
+    var second = time.getSeconds().toString().padStart(2,0);
     var ampm = "AM"
 
-    if(hour == 00){
+    if(hour == 0){
         hour == 12
     }
     if(hour>12){
@@ -22,13 +22,13 @@ function clock(){
 
     let greeting_msg = document.getElementById("qoute")
 
-    if(test >= 04 && test < 12){
+    if(test >= 4 && test < 12){
         greeting_msg.textContent = "GET SOME HEALTHY BREAKFAST !!"
     }else if( test >= 12 && test< 16){
         greeting_msg.textContent ="LET'S HAVE SOME LUNCH !!"}
     else if(test >=16 && test< 19){
         greeting_msg.textContent ="STOP YAWNING, GET SOME TEA..IT'S JUST EVENING !"}
-    else if(test >= 19 && test < 04 ){
+    else if(test >= 19 && test < 4 ){
         greeting_msg.textContent ="CLOSE YOUR EYES & GO TO SLEEP !!"  
 }
 
@@ -41,8 +41,15 @@ clock();
 
 function alarmTimings(){
     var time = new Date();
-    var hour = parseInt(time.getHours().toString().padStart(2,0))
+    var hour = parseInt(time.getHours())
     var ampm = hour >= 12 ? 'PM' : 'AM';
+    if(hour == 0){
+        hour == 12
+    }
+    if(hour>12){
+        hour = hour - 12;
+        ampm = "PM"
+    }
 
     let format = hour + " " + ampm + " - " + (hour + 1) + " " + ampm;
 
@@ -79,6 +86,7 @@ function alarmTimings(){
     document.getElementById("timing4").textContent = "Night Time: "  +  dropdown4.options[dropdown4.selectedIndex].text
 
 }
+
 
 
 
