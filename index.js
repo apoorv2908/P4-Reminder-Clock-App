@@ -4,9 +4,15 @@ function clock(){
     var test = time.getHours().toString().padStart(2,0)
     var minute = time.getMinutes().toString().padStart(2,0)
     var second = time.getSeconds().toString().padStart(2,0)
-    var ampm = hour >= 12 ? 'PM' : 'AM';
+    var ampm = "AM"
 
-    hour = hour%12
+    if(hour == 00){
+        hour == 12
+    }
+    if(hour>12){
+        hour = hour - 12;
+        ampm = "PM"
+    }
 
 
     document.getElementById("clock-box2").textContent = hour + "\nhours"
@@ -14,16 +20,16 @@ function clock(){
     document.getElementById("clock-box4").textContent = second + "\nsecs"
     document.getElementById("clock-box5").textContent = ampm
 
-    let greeting_msg = document.getElementById("gm-text")
+    let greeting_msg = document.getElementById("qoute")
 
-    if(test >= 00 && test < 12){
-        greeting_msg.textContent = "GOOD MORNING!! WAKE UP !!"
+    if(test >= 04 && test < 12){
+        greeting_msg.textContent = "GET SOME HEALTHY BREAKFAST !!"
     }else if( test >= 12 && test< 16){
-        greeting_msg.textContent ="GOOD AFTERNOON!!"}
+        greeting_msg.textContent ="LET'S HAVE SOME LUNCH !!"}
     else if(test >=16 && test< 19){
-        greeting_msg.textContent ="GOOD EVENING!!"}
-    else if(test >= 20 && test < 00 ){
-        greeting_msg.textContent ="GOOD NIGHT!!"  
+        greeting_msg.textContent ="STOP YAWNING, GET SOME TEA..IT'S JUST EVENING !"}
+    else if(test >= 19 && test < 04 ){
+        greeting_msg.textContent ="CLOSE YOUR EYES & GO TO SLEEP !!"  
 }
 
 
@@ -37,7 +43,6 @@ function alarmTimings(){
     var time = new Date();
     var hour = parseInt(time.getHours().toString().padStart(2,0))
     var ampm = hour >= 12 ? 'PM' : 'AM';
-    hour = hour%12;
 
     let format = hour + " " + ampm + " - " + (hour + 1) + " " + ampm;
 
@@ -48,20 +53,17 @@ function alarmTimings(){
     let nightTime = document.getElementById("dd4").value;
 
     if (format == wakeUpTime) {
-        document.getElementById("qoute").innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
+        document.getElementById("gm-text").innerText = "GOOD MORNING !! WAKE UP!!";
         document.getElementById("pic").style.backgroundImage = "url('Component\ 30\ –\ 1.png')";
     } else if (format == lunchTime) {
-        document.getElementById("qoute").innerText = "LET'S HAVE SOME LUNCH !!";
+        document.getElementById("gm-text").innerText = "GOOD AFTERNOON !! TAKE SOME SLEEP";
         document.getElementById("pic").style.backgroundImage = "url('Component\ 31 –\ 1.png')";
     } else if (format == napTime) {
-        document.getElementById("qoute").innerText = "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
+        document.getElementById("gm-text").innerText = "GOOD EVENING !!";
         document.getElementById("pic").style.backgroundImage = "url('lunch_image.png')";
     } else if (format == nightTime) {
-        document.getElementById("qoute").innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
+        document.getElementById("gm-text").innerText = "GOOD NIGHT !!";
         document.getElementById("pic").style.backgroundImage = "url('Component\ 32 –\ 1.png')";
-    } else{
-        document.getElementById("qoute").innerText = "Nothing to show now";
-        document.getElementById("pic").style.backgroundImage = "url('Component\ 30\ –\ 1.png')";
     }
 
     var dropdown1 = document.getElementById("dd1")
@@ -77,9 +79,6 @@ function alarmTimings(){
     document.getElementById("timing4").textContent = "Night Time: "  +  dropdown4.options[dropdown4.selectedIndex].text
 
 }
-
-alarmTimings();
-
 
 
 

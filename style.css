@@ -48,12 +48,12 @@ body{
     border-radius: 10px;
     margin-top: 15px;
     border: 1px solid #EDEDED;
-    opacity: 0.23;
+    opacity: 0.80;
 }
 
 #gm-text{
-    color: black;
-    width: 381px;
+    color: rgba(142, 83, 240, 1);
+    width: 500px;
     height: 35px;
     opacity: 1px;
     font-family: 'Bungee';
@@ -77,6 +77,8 @@ body{
     padding-top: 7px;
     font-family: 'Manrope';
     font-size: 150%;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #alarm-button:hover{
@@ -88,11 +90,11 @@ body{
     height: 117px;
     border: 1px solid #EDEDED;
     margin-left: 14px;
-    opacity: 0.4;
+    opacity: 0.7;
     background-color: #EDEDED;
     border-radius: 10px;
     padding-left: 12px;
-    padding-top: 3px;
+    padding-top: 1px;
 }
 
 #timing1{
@@ -180,6 +182,7 @@ img{
     font-size: 160%;
     text-align: center;
     padding-top: 10px;
+    border-radius: 10px;
 }
 
 .clock-box3{
@@ -199,6 +202,7 @@ img{
     font-size: 160%;
     text-align: center;
     padding-top: 10px;
+    border-radius: 10px;
 }
 
 
@@ -219,6 +223,7 @@ img{
     color: #8A11BF;
     font-size: 160%;
     text-align: center;
+    border-radius: 10px;
     padding-top: 10px;
 }
 .clock-box5{
@@ -237,6 +242,7 @@ img{
     font-family: 'Barlow', sans-serif;
     font-size: 160%;
     text-align: center;
+    border-radius: 10px;
     padding-top: 25px;
 }
 
@@ -267,8 +273,8 @@ img{
     border: 1px solid #FFFFFF;
     border-radius: 10px;
     font-family: 'Bungee';
-    font-size: 170%;
-    padding-top: 25px;
+    font-size: 150%;
+    padding-top: 40px;
     color: rgba(142, 83, 240, 1);
     line-height: 100%;
     text-align: center;
@@ -401,7 +407,7 @@ label{
 
 
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 1024px) and (min-width: 400px) {
 
     .container{
         flex-direction: column;
