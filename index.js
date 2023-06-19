@@ -4,15 +4,7 @@ function clock(){
     var test = time.getHours();
     var minute = time.getMinutes().toString().padStart(2,0);
     var second = time.getSeconds().toString().padStart(2,0);
-    var ampm = "AM"
-
-    if(hour == 0){
-        hour == 12
-    }
-    if(hour>12){
-        hour = (hour - 12).toString().padStart(2,0);
-        ampm = "PM"
-    }
+    var ampm = hour >= 12 ? 'PM' : 'AM';
 
     document.getElementById("clock-box2").textContent = hour + "\nhours"
     document.getElementById("clock-box3").textContent = minute + "\nmins"
@@ -40,15 +32,8 @@ clock();
 
 function alarmTimings(){
     var time = new Date();
-    var hour = parseInt(time.getHours())
+    var hour = time.getHours()
     var ampm = hour >= 12 ? 'PM' : 'AM';
-    if(hour == 0){
-        hour == 12
-    }
-    if(hour>12){
-        hour = hour - 12;
-        ampm = "PM"
-    }
 
     let format = hour + " " + ampm + " - " + (hour + 1) + " " + ampm;
 
@@ -87,7 +72,5 @@ function alarmTimings(){
     document.getElementById("timing4").textContent = "Night Time : "  +  dropdown4.options[dropdown4.selectedIndex].text
 
 }
-
-
 
 
